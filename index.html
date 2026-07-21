@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Coherence</title>
+<meta name="description" content="Coherence is here. See you soon." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Fraunces:opsz,wght@9..144,300;9..144,400&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #0e0f11;
+    --fg: #f4f2ee;
+    --muted: #8a8a86;
+    --line: rgba(244, 242, 238, 0.12);
+    --accent: #e7e2d8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body { height: 100%; }
+
+  body {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Soft ambient gradient — subtle "field coming into coherence" */
+  .field {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    background:
+      radial-gradient(60vw 60vw at 50% 38%, rgba(231, 226, 216, 0.06), transparent 70%),
+      radial-gradient(40vw 40vw at 70% 70%, rgba(120, 140, 160, 0.05), transparent 70%);
+    pointer-events: none;
+  }
+
+  .grain {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    opacity: 0.035;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .wrap {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .mark {
+    width: 46px;
+    height: 46px;
+    margin-bottom: 2.6rem;
+    opacity: 0;
+    animation: rise 1s ease 0.1s forwards;
+  }
+  .mark circle { transform-origin: center; }
+  .mark .ring { animation: breathe 6s ease-in-out infinite; }
+
+  h1 {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 300;
+    font-size: clamp(2.6rem, 8vw, 5.2rem);
+    letter-spacing: -0.02em;
+    line-height: 1;
+    opacity: 0;
+    animation: rise 1s ease 0.25s forwards;
+  }
+
+  .tagline {
+    margin-top: 1.5rem;
+    max-width: 34ch;
+    font-size: clamp(0.95rem, 2.4vw, 1.1rem);
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--muted);
+    opacity: 0;
+    animation: rise 1s ease 0.45s forwards;
+  }
+
+  .soon {
+    margin-top: 3.4rem;
+    font-size: 0.82rem;
+    font-weight: 400;
+    letter-spacing: 0.34em;
+    text-transform: uppercase;
+    color: var(--accent);
+    opacity: 0;
+    animation: rise 1s ease 0.65s forwards;
+  }
+  .soon::after {
+    content: "";
+    display: block;
+    width: 34px;
+    height: 1px;
+    margin: 1.1rem auto 0;
+    background: var(--line);
+  }
+
+  footer {
+    position: relative;
+    z-index: 2;
+    padding: 1.8rem;
+    text-align: center;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    opacity: 0;
+    animation: rise 1s ease 0.85s forwards;
+  }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes breathe {
+    0%, 100% { opacity: 0.35; transform: scale(1); }
+    50%      { opacity: 0.9;  transform: scale(1.06); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; }
+    .mark, h1, .tagline, .soon, footer { opacity: 1 !important; }
+  }
+</style>
+</head>
+<body>
+  <div class="field"></div>
+  <div class="grain"></div>
+
+  <main class="wrap">
+    <svg class="mark" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle class="ring" cx="50" cy="50" r="34" stroke="#e7e2d8" stroke-width="1.2" opacity="0.4" />
+      <circle cx="50" cy="50" r="20" stroke="#e7e2d8" stroke-width="1.2" opacity="0.7" />
+      <circle cx="50" cy="50" r="3.4" fill="#e7e2d8" />
+    </svg>
+
+    <h1>Coherence</h1>
+    <p class="tagline">A quiet space where signal, meaning, and decision come into alignment.</p>
+    <p class="soon">See you soon</p>
+  </main>
+
+  <footer>coherenceishere.dev</footer>
+</body>
+</html>
