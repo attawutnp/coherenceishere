@@ -1,226 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Coherence</title>
-<meta name="description" content="Many waves, one rhythm. Coherence is here — see you soon." />
-<meta property="og:title" content="Coherence" />
-<meta property="og:description" content="Many waves, one rhythm. See you soon." />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Fraunces:opsz,wght@9..144,300;9..144,400&display=swap" rel="stylesheet" />
-<style>
-  :root {
-    --bg: #0b0c0e;
-    --fg: #f4f2ee;
-    --muted: #8f8f8b;
-    --accent: #e7e2d8;
-    --line: rgba(244, 242, 238, 0.12);
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html, body { height: 100%; }
-  body {
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
-    background: var(--bg);
-    color: var(--fg);
-    min-height: 100vh;
-    overflow: hidden;
-    position: relative;
-    -webkit-font-smoothing: antialiased;
-  }
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#E8E8E4">
+  <title>Coherence Is Here — Urban &amp; Security Intelligence</title>
+  <meta name="description" content="Coherence Is Here is developing a shared spatial intelligence platform for cities, domestic security, and defense.">
+  <meta property="og:title" content="Coherence Is Here — Urban &amp; Security Intelligence">
+  <meta property="og:description" content="Connect places, assets, events, and evidence.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://coherenceishere.dev/">
+  <link rel="canonical" href="https://coherenceishere.dev/">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+Thai:wght@400;500&display=swap" rel="stylesheet">
+  <style>
 
-  #waves {
-    position: fixed;
-    inset: 0;
-    z-index: 0;
-    display: block;
-  }
+:root{--canvas:#E8E8E4;--surface:#F5F5F2;--text:#252A2E;--muted:#555E64;--navy:#101820;--border:#CDD0CD;--water:#5F91B8;--green:#63866A;--amber:#D6A44C;--hazard:#C96F59;--critical:#A94F45;--safe:#628269;--radius:8px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px}body{margin:0;background:var(--canvas);color:var(--text);font:400 16px/1.65 Inter,"Noto Sans Thai",system-ui,sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button{font:inherit;color:inherit}button,a,summary{-webkit-tap-highlight-color:transparent}button{cursor:pointer}a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--navy);outline-offset:5px}::selection{color:var(--surface);background:var(--navy)}.wrap{width:100%;max-width:1328px;padding:0 48px;margin:auto}.skip{position:fixed;left:16px;top:-80px;z-index:30;padding:12px 24px;background:var(--navy);color:var(--surface)}.skip:focus{top:16px}.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}[hidden]{display:none!important}.interactive-only{display:none}.js .interactive-only{display:flex}
+header{position:sticky;top:0;z-index:10;background:var(--canvas);border-bottom:1px solid var(--border)}.nav{height:80px;display:flex;align-items:center;justify-content:space-between;gap:32px}.brand{display:inline-flex;gap:12px;align-items:center;font-size:22px;font-weight:500;letter-spacing:-.8px}.mark{width:26px;height:26px;flex-shrink:0}.nav-links{display:flex;align-items:center;gap:32px;font-size:13px}.nav-links a{display:inline-flex;min-height:44px;align-items:center;gap:24px}.nav-links a:hover{text-decoration:underline;text-underline-offset:6px}.nav-links .nav-cta{border:1px solid var(--border);border-radius:6px;padding:0 16px;margin-left:8px}.nav-links .nav-cta:hover{background:var(--surface);text-decoration:none}.eyebrow{font-size:11px;letter-spacing:.09em;text-transform:uppercase;line-height:1.5;font-weight:500}.hero{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;padding:88px 0 72px}.hero h1{font-size:clamp(42px,4.65vw,64px);font-weight:500;line-height:1.09;letter-spacing:-.055em;margin:24px 0}.hero-copy{font-size:17px;color:var(--muted);max-width:420px;margin:0}.actions{display:flex;flex-wrap:wrap;gap:12px;margin:32px 0}.button{display:inline-flex;align-items:center;justify-content:space-between;gap:24px;min-height:48px;padding:12px 20px;border:1px solid var(--border);border-radius:6px;font-size:13px;font-weight:500;transition:background .2s,border-color .2s}.button.primary{background:var(--navy);border-color:var(--navy);color:var(--surface)}.button.primary:hover{background:var(--text)}.button.secondary:hover{background:var(--surface);border-color:var(--text)}.hero-note{display:flex;gap:12px;flex-wrap:wrap;align-items:center;font-size:11px;color:var(--muted);margin:0}.status-pill{padding:4px 8px;border:1px solid var(--border);border-radius:4px;color:var(--text);font-size:10px}.dot{display:inline-block;width:5px;height:5px;background:var(--text);border-radius:50%;flex-shrink:0}.scene-panel{min-width:0;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px;box-shadow:0 4px 20px rgba(16,24,32,.035)}.scene-top,.scene-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:10px;color:var(--muted)}.scene-top strong{font-size:10px;font-weight:500;color:var(--text);letter-spacing:.04em}.concept-label{font-size:9px;letter-spacing:.04em}.scene{display:block;width:100%;height:auto;margin:8px 0 16px}.scene text{font-family:Inter,system-ui,sans-serif}.scene-bottom{border-top:1px solid var(--border);padding-top:12px}.view-context{font-size:11px;margin:8px 0 0;color:var(--muted)}.scope-line{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:24px 0;display:flex;align-items:center;justify-content:space-between;gap:24px}.scope-line>.eyebrow{color:var(--muted)}.scope-items{display:flex;gap:32px;font-size:12px}.scope-items span{display:inline-flex;gap:12px;align-items:center}.scope-items i{font-style:normal;color:var(--muted);font-size:10px}
+.content-section{padding:88px 0;border-bottom:1px solid var(--border)}.section-heading{display:grid;grid-template-columns:1.25fr 1fr;gap:64px;align-items:end;margin-bottom:40px}.section-heading h2{font-size:40px;font-weight:500;line-height:1.15;letter-spacing:-.045em;margin:16px 0 0}.section-heading p{margin:0;color:var(--muted);font-size:15px;max-width:480px}.domain-picker{display:none;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-bottom:40px;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}.js .domain-picker{display:grid}.domain-picker button{position:relative;display:flex;flex-direction:column;text-align:left;gap:12px;padding:24px 32px;min-height:164px;border:0;border-right:1px solid var(--border);background:var(--surface);transition:background .2s,color .2s}.domain-picker button:last-child{border-right:0}.domain-picker button:hover{background:#DFE1DC}.domain-picker button strong{font-size:24px;font-weight:500;letter-spacing:-.035em}.domain-picker button>.eyebrow{font-size:10px}.domain-picker button>span:not(.eyebrow):not(.picker-arrow){font-size:12px;color:var(--muted);padding-right:16px}.domain-picker button[aria-pressed="true"]{background:var(--navy);color:var(--surface)}.domain-picker button[aria-pressed="true"]>span{color:var(--surface)!important}.domain-picker button:focus-visible{outline:2px solid var(--water);outline-offset:-6px}.picker-arrow{position:absolute;right:24px;bottom:22px;font-size:20px}.domain-intro{display:grid;grid-template-columns:1.7fr 1fr;gap:48px;align-items:center;margin-bottom:24px}.domain-intro h3{font-size:28px;font-weight:500;letter-spacing:-.035em;line-height:1.25;margin:10px 0 12px}.domain-intro p{font-size:14px;color:var(--muted);margin:0;max-width:650px}.customer-context{border-left:1px solid var(--border);padding-left:32px}.customer-context>.eyebrow{color:var(--muted);font-size:10px}.customer-context p{font-size:13px;margin-top:8px}.workspace-panel+.workspace-panel{margin-top:64px}.js .workspace-panel{margin-top:0}
+.workspace{border:1px solid #B8BEB9;border-radius:var(--radius);background:var(--surface);overflow:hidden;box-shadow:0 4px 20px rgba(16,24,32,.04)}.workspace-header{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 24px;border-bottom:1px solid var(--border);background:var(--surface)}.workspace-header .eyebrow{font-size:10px}.example-badge{display:inline-flex;align-items:center;gap:8px;font-size:10px;color:var(--muted)}.scenario-toolbar{padding:12px 24px;gap:12px;align-items:center;flex-wrap:wrap;border-bottom:1px solid var(--border)}.scenario-toolbar>span{margin-left:auto;font-size:11px;color:var(--muted)}.scenario-button,.text-control,.reset-control{min-height:44px;border:1px solid var(--border);border-radius:6px;padding:8px 12px;font-size:11px;background:transparent}.scenario-button{background:var(--navy);border-color:var(--navy);color:var(--surface);font-weight:500}.scenario-button[aria-pressed="true"]{background:var(--surface);color:var(--navy)}.text-control:hover,.reset-control:hover{background:var(--canvas)}.reset-control{border-color:transparent}.workspace-body{display:grid;grid-template-columns:180px minmax(0,1fr) 272px;align-items:stretch}.object-rail{border-right:1px solid var(--border);padding:24px 12px;display:flex;flex-direction:column;min-width:0}.rail-heading{display:flex;justify-content:space-between;align-items:center;padding:0 8px}.rail-heading .eyebrow{font-size:10px}.rail-count{font-size:10px;background:var(--canvas);padding:1px 6px;border-radius:4px}.rail-hint{margin:6px 8px 24px;font-size:11px;color:var(--muted)}.asset-list{flex-direction:column;gap:4px}.asset-list button{display:flex;align-items:center;text-align:left;gap:8px;min-height:52px;width:100%;padding:10px 8px;border:1px solid transparent;border-radius:6px;background:transparent;font-size:11px;line-height:1.4}.asset-list button:hover{background:var(--canvas)}.asset-list button[aria-pressed="true"]{background:var(--navy);color:var(--surface)}.asset-indicator{font-size:16px;flex-shrink:0}.asset-arrow{margin-left:auto;font-size:12px}.rail-bottom{margin-top:auto;padding:48px 8px 0}.rail-bottom>.eyebrow{font-size:9px;color:var(--muted)}.rail-bottom p{font-size:10px;color:var(--muted);margin:8px 0 0}.workspace-map{background:var(--canvas);padding:24px 20px 20px;min-width:0}.map-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}.map-heading>.eyebrow{font-size:9px;color:var(--muted)}.map-hint{font-size:10px;color:var(--muted)}.map-question{font-size:14px;line-height:1.5;font-weight:500;max-width:440px;margin:0 0 16px}.domain-map{display:block;width:100%;height:auto;min-height:300px}.domain-object text{font:13px Inter,system-ui,sans-serif;text-anchor:middle;fill:var(--text)}.domain-object .asset-flag text{font-size:12px}.selection-ring{opacity:0}.domain-object[aria-pressed="true"] .selection-ring{opacity:1}.js .domain-object{cursor:pointer}.domain-object:focus-visible{outline:2px solid var(--navy);outline-offset:4px}.domain-object:hover .selection-ring{opacity:.55}.domain-legend{font-size:10px;color:var(--muted);margin:16px 0}.demo-summary{border-top:1px solid #B8BEB9;padding-top:16px;display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;font-size:10px;color:var(--muted)}.demo-summary strong{font-size:22px;font-weight:500;letter-spacing:-.03em;color:var(--text);margin-right:6px}.demo-inspector{padding:24px;border-left:1px solid var(--border);min-width:0}.demo-inspector>.eyebrow{font-size:9px;color:var(--muted)}.demo-inspector h4{font-size:23px;line-height:1.2;font-weight:500;letter-spacing:-.035em;margin:12px 0}.demo-inspector h4:focus{outline:none}.demo-inspector p{font-size:12px;color:var(--muted);line-height:1.7;margin:12px 0}.demo-inspector h5{font-size:10px;font-weight:500;letter-spacing:.04em;text-transform:uppercase;margin:24px 0 8px}.object-status{display:inline-block;max-width:100%;font-size:10px;border:1px solid var(--border);border-radius:4px;padding:5px 8px;line-height:1.5}.object-status.attention{border-color:var(--amber);color:var(--text);background:#EEE5D2}.demo-inspector ul{list-style:none;padding:0;margin:0;font-size:12px}.related-link{width:100%;text-align:left;min-height:40px;border:0;border-bottom:1px solid var(--border);padding:8px 0;background:transparent;font-size:12px}.related-link:hover{text-decoration:underline;text-underline-offset:4px}.decision-note{margin:24px 0;border-top:1px solid var(--border)}.demo-inspector details{border-top:1px solid var(--border);padding-top:16px;font-size:11px}.demo-inspector summary{cursor:pointer;min-height:32px}.demo-inspector details p{font-size:11px}.domain-workflow{list-style:none;padding:20px 24px;margin:0;border-top:1px solid var(--border);display:grid;grid-template-columns:repeat(3,1fr);gap:24px;font-size:11px}.domain-workflow li{display:flex;gap:12px;align-items:center}.domain-workflow span{color:var(--muted);font-size:10px}.workspace-note{border-top:1px solid var(--border);padding:16px 24px;margin:0;font-size:11px;color:var(--muted);display:flex;gap:16px;align-items:baseline;line-height:1.6}.workspace-note span{font-size:9px;letter-spacing:.06em;white-space:nowrap;color:var(--text)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}.step{border-top:1px solid var(--border);padding-top:24px}.step-number{font-size:11px;color:var(--muted)}.step h3{display:flex;justify-content:space-between;font-size:18px;font-weight:500;margin:20px 0 12px}.step h3 span{color:var(--muted)}.step p{font-size:14px;line-height:1.7;color:var(--muted);margin:0}.method-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}.principle{padding-top:24px;border-top:1px solid var(--text)}.principle h3{font-size:18px;letter-spacing:-.02em;font-weight:500;margin:0 0 12px}.principle p{font-size:14px;color:var(--muted);margin:0}.closing{display:flex;align-items:center;justify-content:space-between;gap:48px;padding:88px 0}.closing h2{font-size:40px;font-weight:500;line-height:1.15;letter-spacing:-.045em;margin:0 0 20px}.closing p{font-size:14px;color:var(--muted);margin:0}footer{background:var(--surface);border-top:1px solid var(--border);padding:48px 0 24px}.footer-main{display:grid;grid-template-columns:1fr 1fr 1fr;gap:48px;align-items:start}.footer-main p{font-size:12px;color:var(--muted);margin:12px 0}.brand-dot{font-size:18px}.footer-main nav{display:flex;flex-direction:column;gap:4px;align-items:flex-start;font-size:12px}.footer-main nav a{min-height:36px;display:inline-flex;align-items:center}.footer-main nav a:hover{text-decoration:underline;text-underline-offset:5px}.footer-status .eyebrow{font-size:10px;color:var(--muted)}.footer-bottom{display:flex;justify-content:space-between;gap:24px;margin-top:40px;padding-top:24px;font-size:11px;color:var(--muted)}
+@media(max-width:1100px){.wrap{padding:0 32px}.hero{gap:32px}.hero h1{font-size:48px}.workspace-body{grid-template-columns:156px minmax(0,1fr) 244px}.demo-inspector{padding:20px}.workspace-map{padding:20px 16px}.map-hint{display:none}.domain-map{min-height:260px}.domain-picker button{padding:24px}.domain-picker button strong{font-size:22px}.nav-links{gap:24px}}
+@media(max-width:960px){.workspace-body{grid-template-columns:156px minmax(0,1fr)}.demo-inspector{grid-column:1/-1;border-left:0;border-top:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr;column-gap:32px}.demo-inspector>.eyebrow,.demo-inspector h4,.demo-inspector>[data-part="kind"],.demo-inspector>.object-status,.demo-inspector>[data-part="description"]{grid-column:1}.demo-inspector>.object-status{justify-self:start}.demo-inspector>h5,.demo-inspector>ul,.demo-inspector>.decision-note,.demo-inspector>details{grid-column:2}.demo-inspector>h5{grid-row:1;margin-top:0}.demo-inspector>ul{grid-row:2/5}.demo-inspector>.decision-note{grid-row:5/7;margin:16px 0}.demo-inspector>details{grid-row:7}.domain-map{min-height:0}.hero{padding-top:64px}.hero h1{font-size:44px}.hero-copy{font-size:16px}.scene-panel{padding:16px}.concept-label{display:none}.scope-items{gap:20px}.scope-line{align-items:flex-start;flex-direction:column;gap:16px}.nav-cta{display:none!important}.section-heading{gap:40px}.domain-intro{gap:32px}.domain-workflow{gap:16px}}
+@media(max-width:700px){html{scroll-padding-top:112px}.wrap{padding:0 20px}.nav{height:auto;min-height:80px;flex-wrap:wrap;padding-top:12px;padding-bottom:12px;gap:4px 24px}.brand{font-size:20px}.nav-links{gap:20px;font-size:12px}.hero{grid-template-columns:1fr;padding:48px 0;gap:40px}.hero h1{font-size:clamp(40px,9vw,56px);max-width:520px}.hero-copy{max-width:480px}.hero-note{font-size:10px}.scene-panel{max-width:540px;width:100%;margin:auto;padding:20px}.concept-label{display:block}.scope-items{flex-wrap:wrap;gap:16px 24px}.content-section{padding:64px 0}.section-heading{grid-template-columns:1fr;gap:24px;margin-bottom:32px}.section-heading h2{font-size:34px}.section-heading p{font-size:14px}.domain-picker{margin-bottom:32px}.domain-picker button{min-height:116px;padding:16px 12px;gap:8px}.domain-picker button>.eyebrow{display:none}.domain-picker button strong{font-size:16px;line-height:1.25}.domain-picker button>span:not(.picker-arrow){display:none}.picker-arrow{position:static;align-self:flex-end;margin-top:auto;font-size:16px}.domain-intro{grid-template-columns:1fr;gap:16px}.domain-intro h3{font-size:26px}.customer-context{padding:0;border:0}.customer-context p{font-size:12px;margin-top:4px}.workspace-header{padding:16px;flex-wrap:wrap;gap:8px}.scenario-toolbar{padding:12px 16px;gap:8px}.scenario-toolbar>span{width:100%;margin-left:0}.workspace-body{grid-template-columns:1fr}.object-rail{border:0;border-bottom:1px solid var(--border);padding:16px}.rail-heading,.rail-hint{display:none}.asset-list{flex-direction:row;flex-wrap:wrap;gap:8px}.asset-list button{width:auto;min-height:44px;flex:1 1 calc(50% - 8px);border-color:var(--border);padding:8px;font-size:11px}.asset-arrow{display:none}.rail-bottom{display:none}.workspace-map{padding:20px 16px}.map-hint{display:block;font-size:9px}.map-question{font-size:13px}.domain-object text{font-size:16px}.domain-object .asset-flag text{font-size:12px}.demo-inspector{display:block;padding:20px}.demo-inspector h4{font-size:24px}.demo-inspector>.object-status{margin-bottom:4px}.demo-inspector>h5{margin-top:24px}.demo-inspector>.decision-note{margin:24px 0}.demo-inspector p{font-size:13px}.domain-workflow{padding:16px;grid-template-columns:1fr;gap:12px}.workspace-note{padding:16px;display:block}.workspace-note span{display:block;margin-bottom:6px}.steps{grid-template-columns:repeat(2,1fr);gap:32px 24px}.method-grid{grid-template-columns:1fr;gap:32px}.closing{padding:64px 0;flex-direction:column;align-items:flex-start;gap:32px}.closing h2{font-size:34px}.footer-main{grid-template-columns:1fr 1fr;gap:32px}.footer-status{grid-column:1/-1}.footer-bottom{margin-top:24px;flex-wrap:wrap;gap:12px}.scene-top{font-size:9px}.scene-bottom{font-size:9px}}
+@media(max-width:380px){.wrap{padding:0 16px}.nav-links{gap:16px}.domain-picker button strong{font-size:14px}.scene-panel{padding:16px}.concept-label{display:none}.hero h1{font-size:38px}.scenario-button{width:100%}.map-hint{display:none}}
 
-  /* subtle vignette so text stays readable */
-  .vignette {
-    position: fixed;
-    inset: 0;
-    z-index: 1;
-    pointer-events: none;
-    background: radial-gradient(75vw 75vh at 50% 46%, transparent 40%, rgba(11, 12, 14, 0.72) 100%);
-  }
+.contact-section{display:grid;grid-template-columns:1fr 1.2fr;gap:64px;align-items:center;padding:88px 0}.contact-intro h2{font-size:40px;font-weight:500;line-height:1.15;letter-spacing:-.045em;margin:16px 0 20px}.contact-intro p{font-size:14px;color:var(--muted);max-width:340px;margin:0}.contact-links{border-top:1px solid var(--border)}.contact-row{display:grid;grid-template-columns:24px 80px minmax(0,1fr) 16px;gap:16px;align-items:center;min-height:100px;padding:24px 8px;border-bottom:1px solid var(--border);transition:background .2s}.contact-row:hover{background:var(--surface)}.contact-row svg{width:24px;height:24px;color:var(--muted)}.contact-label{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}.contact-value{font-size:clamp(14px,1.5vw,20px);letter-spacing:-.02em;overflow-wrap:anywhere}.contact-arrow{font-size:18px}@media(max-width:960px){.contact-section{grid-template-columns:1fr;gap:32px}.contact-links{max-width:680px;width:100%}}@media(max-width:700px){.contact-section{padding:64px 0}.contact-intro h2{font-size:34px}.contact-row{grid-template-columns:24px minmax(0,1fr) 16px;gap:8px 12px;padding:20px 8px;min-height:96px}.contact-row svg{grid-row:1/3}.contact-label{grid-column:2}.contact-value{grid-column:2;font-size:16px}.contact-arrow{grid-column:3;grid-row:1/3}}
+@media(min-width:701px) and (max-width:960px){.nav{height:auto;min-height:80px;flex-wrap:wrap;padding-top:12px;padding-bottom:12px;gap:8px 24px}}
 
-  .content {
-    position: relative;
-    z-index: 2;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 2rem;
-    pointer-events: none;
-  }
-
-  h1 {
-    font-family: "Fraunces", Georgia, serif;
-    font-weight: 300;
-    font-size: clamp(2.8rem, 9vw, 5.6rem);
-    letter-spacing: -0.02em;
-    line-height: 1;
-    opacity: 0;
-    animation: rise 1.1s ease 0.2s forwards;
-  }
-  .tagline {
-    margin-top: 1.5rem;
-    max-width: 32ch;
-    font-size: clamp(0.95rem, 2.4vw, 1.12rem);
-    font-weight: 300;
-    line-height: 1.6;
-    color: var(--muted);
-    opacity: 0;
-    animation: rise 1.1s ease 0.42s forwards;
-  }
-  .soon {
-    margin-top: 3.2rem;
-    font-size: 0.8rem;
-    font-weight: 400;
-    letter-spacing: 0.34em;
-    text-transform: uppercase;
-    color: var(--accent);
-    opacity: 0;
-    animation: rise 1.1s ease 0.62s forwards;
-  }
-  .soon::after {
-    content: "";
-    display: block;
-    width: 34px;
-    height: 1px;
-    margin: 1.05rem auto 0;
-    background: var(--line);
-  }
-
-  footer {
-    position: fixed;
-    bottom: 0; left: 0; right: 0;
-    z-index: 2;
-    padding: 1.6rem;
-    text-align: center;
-    font-size: 0.72rem;
-    letter-spacing: 0.14em;
-    color: var(--muted);
-    opacity: 0;
-    animation: rise 1.1s ease 0.82s forwards;
-  }
-
-  @keyframes rise {
-    from { opacity: 0; transform: translateY(12px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    h1, .tagline, .soon, footer { animation: none; opacity: 1; }
-  }
-</style>
+.brand-artwork{display:inline-flex;width:280px;max-width:100%;flex-shrink:0}.logo-frame{position:relative;display:block;width:100%;aspect-ratio:690 / 84;overflow:hidden;mix-blend-mode:multiply}.logo-frame img{position:absolute;width:148.405797%;max-width:none;height:auto;left:-24.347826%;top:-561.904762%;filter:grayscale(1) contrast(2)}.footer-main .brand-artwork{width:280px}@media(max-width:700px){.brand-artwork{width:260px}.footer-main{grid-template-columns:1fr}.footer-main .brand-artwork{width:260px}.footer-status{grid-column:auto}}@media(max-width:380px){.brand-artwork,.footer-main .brand-artwork{width:240px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+  </style>
 </head>
-<body>
-  <canvas id="waves"></canvas>
-  <div class="vignette"></div>
-
-  <main class="content">
-    <h1>Coherence</h1>
-    <p class="tagline">Many waves, drifting apart and falling back into one rhythm.</p>
-    <p class="soon">See you soon</p>
+<body id="top">
+  <a class="skip" href="#main">Skip to content</a>
+  <header><div class="wrap nav">
+    <a class="brand brand-artwork" href="#top" aria-label="Coherence Is Here home"><span class="logo-frame"><img src="assets/coherence-is-here-logo.png" width="1024" height="1024" alt="Coherence Is Here" decoding="async"></span></a>
+    <nav class="nav-links" aria-label="Main navigation"><a href="#explorer">Workspaces</a><a href="#platform">Platform</a><a href="#approach">Approach</a><a href="#contact">Contact us</a></nav>
+  </div></header>
+  <main id="main">
+    <div class="wrap">
+      <section class="hero" aria-labelledby="hero-title">
+        <div>
+          <div class="eyebrow">Urban &amp; Security Intelligence</div>
+          <h1 id="hero-title">Clarity across<br>complex environments.</h1>
+          <p class="hero-copy">Spatial intelligence for the people responsible for cities, critical services, and defense readiness.</p>
+          <div class="actions"><a class="button primary" href="#explorer">Explore the workspaces <span aria-hidden="true">↗</span></a><a class="button secondary" href="#approach">Our approach <span aria-hidden="true">→</span></a></div>
+          <p class="hero-note"><span class="status-pill">Product concept</span> Built around context. Grounded in evidence.</p>
+        </div>
+        <div class="scene-panel">
+          <div class="scene-top"><strong>◎ SPATIAL WORKSPACE</strong><span class="concept-label">COHERENCE IS HERE / OVERVIEW</span></div>
+          <svg class="scene" viewBox="0 0 600 440" role="img" aria-labelledby="scene-title scene-desc">
+            <title id="scene-title">Conceptual isometric city and infrastructure workspace</title><desc id="scene-desc">A stylized city block with a blue water overlay, neutral buildings, and a selected facility. This illustration does not represent actual geographic geometry or measured exposure.</desc>
+            <defs><pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#CDD0CD" stroke-width=".65"/></pattern></defs>
+            <path d="M48 284L292 137L550 286L304 432Z" fill="#D8DAD5"/><path d="M48 274L292 127L550 276L304 422Z" fill="#F5F5F2" stroke="#CDD0CD"/>
+            <g transform="matrix(.82 .47 -.82 .47 293 126)"><rect width="310" height="290" fill="url(#grid)"/><path d="M0 160H310M120 0V290M240 0V290" stroke="#D0D2CE" stroke-width="18"/><path d="M0 160H310M120 0V290M240 0V290" stroke="#F5F5F2" stroke-width="1" stroke-dasharray="5 7"/><path d="M0 260C70 235 90 290 170 263S250 245 310 265" fill="none" stroke="#5F91B8" stroke-width="25" opacity=".55"/></g>
+            <g id="flood-overlay" opacity=".38"><path d="M87 287L150 247L228 280L267 315L229 359L172 345Z" fill="#5F91B8" stroke="#5F91B8"/></g>
+            <g id="city-buildings" stroke="#AEB3AE" stroke-width=".75" stroke-linejoin="round"><polygon points="222,130 255,149 255,204 222,185" fill="#C6C9C3"/><polygon points="255,149 288,130 288,185 255,204" fill="#B8BDB7"/><polygon points="255,111 288,130 255,149 222,130" fill="#E1E2DC"/><polygon points="271,120 302,138 302,229 271,211" fill="#101820"/><polygon points="302,138 333,120 333,211 302,229" fill="#101820"/><polygon points="302,102 333,120 302,138 271,120" fill="#101820"/><polygon points="321,191 349,207 349,253 321,237" fill="#C6C9C3"/><polygon points="349,207 377,191 377,237 349,253" fill="#B8BDB7"/><polygon points="349,175 377,191 349,207 321,191" fill="#E1E2DC"/><polygon points="371,231 398,247 398,281 371,265" fill="#C6C9C3"/><polygon points="398,247 425,231 425,265 398,281" fill="#B8BDB7"/><polygon points="398,215 425,231 398,247 371,231" fill="#E1E2DC"/><polygon points="182,176 213,194 213,232 182,214" fill="#C6C9C3"/><polygon points="213,194 244,176 244,214 213,232" fill="#B8BDB7"/><polygon points="213,158 244,176 213,194 182,176" fill="#E1E2DC"/><polygon points="232,177 262,194 262,259 232,242" fill="#C6C9C3"/><polygon points="262,194 292,177 292,242 262,259" fill="#B8BDB7"/><polygon points="262,160 292,177 262,194 232,177" fill="#E1E2DC"/><polygon points="281,226 309,242 309,285 281,269" fill="#C6C9C3"/><polygon points="309,242 337,226 337,269 309,285" fill="#B8BDB7"/><polygon points="309,210 337,226 309,242 281,226" fill="#E1E2DC"/><polygon points="328,264 353,279 353,309 328,294" fill="#C6C9C3"/><polygon points="353,279 378,264 378,294 353,309" fill="#B8BDB7"/><polygon points="353,249 378,264 353,279 328,264" fill="#E1E2DC"/><polygon points="140,214 168,230 168,259 140,243" fill="#C6C9C3"/><polygon points="168,230 196,214 196,243 168,259" fill="#B8BDB7"/><polygon points="168,198 196,214 168,230 140,214" fill="#E1E2DC"/><polygon points="186,227 215,244 215,287 186,270" fill="#C6C9C3"/><polygon points="215,244 244,227 244,270 215,287" fill="#B8BDB7"/><polygon points="215,210 244,227 215,244 186,227" fill="#E1E2DC"/><polygon points="236,266 263,282 263,314 236,298" fill="#C6C9C3"/><polygon points="263,282 290,266 290,298 263,314" fill="#B8BDB7"/><polygon points="263,250 290,266 263,282 236,266" fill="#E1E2DC"/><polygon points="283,301 309,316 309,340 283,325" fill="#C6C9C3"/><polygon points="309,316 335,301 335,325 309,340" fill="#B8BDB7"/><polygon points="309,286 335,301 309,316 283,301" fill="#E1E2DC"/></g>
+            <g fill="#63866A" opacity=".8"><ellipse cx="404" cy="290" rx="14" ry="8"/><ellipse cx="427" cy="303" rx="12" ry="7"/><ellipse cx="448" cy="315" rx="14" ry="8"/><path d="M404 290v-10m23 23v-10m21 22v-10" stroke="#252A2E" stroke-width="1"/><ellipse cx="404" cy="278" rx="9" ry="11"/><ellipse cx="427" cy="291" rx="8" ry="10"/><ellipse cx="448" cy="303" rx="9" ry="11"/></g>
+            <g fill="none" stroke="#101820" stroke-width="1"><path d="M330 172V87H428"/><circle cx="330" cy="172" r="11"/><circle cx="330" cy="172" r="5"/></g>
+            <rect x="414" y="52" width="163" height="61" rx="6" fill="#F5F5F2" stroke="#CDD0CD"/><text x="428" y="73" font-size="9" fill="#555E64">SELECTED OBJECT</text><text id="object-label" x="428" y="94" font-size="12" fill="#101820" font-weight="500">Infrastructure asset</text>
+            <path d="M88 94L169 48L246 91" fill="none" stroke="#70777C" stroke-width="1" stroke-dasharray="4 5"/><circle cx="169" cy="48" r="4" fill="#101820"/><text x="78" y="80" font-size="9" fill="#555E64">OBSERVE / CONNECT</text>
+          </svg>
+          <div class="scene-bottom"><span id="scene-legend">Blue / water scenario · Navy / selection</span><span>Concept illustration</span></div>
+          <p class="view-context">Places, relationships, and observations in a shared context.</p>
+        </div>
+      </section>
+      <div class="scope-line"><span class="eyebrow">A shared spatial foundation</span><div class="scope-items"><span><i>01</i> Places &amp; assets</span><span><i>02</i> Events &amp; change</span><span><i>03</i> Evidence &amp; decisions</span></div></div>
+<section class="content-section domain-showcase" id="explorer" aria-labelledby="explorer-title"><div class="section-heading"><div><div class="eyebrow">01 / Choose your workspace</div><h2 id="explorer-title">Your mission.<br>Your workspace.</h2></div><p>Three perspectives on a connected world. Choose the environment you work in, then explore its objects, relationships, and decisions.</p></div><div id="domains" class="domain-picker interactive-only" role="group" aria-label="Choose a customer workspace"><button type="button" data-domain="urban" aria-pressed="true" aria-controls="workspace-urban"><span class="eyebrow">01 / District exposure</span><strong>Urban</strong><span>City planners · Infrastructure operators</span><span class="picker-arrow" aria-hidden="true">↗</span></button><button type="button" data-domain="domestic" aria-pressed="false" aria-controls="workspace-domestic"><span class="eyebrow">02 / Incident coordination</span><strong>Domestic Security</strong><span>Emergency coordinators · Critical-service operators</span><span class="picker-arrow" aria-hidden="true">↗</span></button><button type="button" data-domain="defense" aria-pressed="false" aria-controls="workspace-defense"><span class="eyebrow">03 / Readiness &amp; logistics</span><strong>Defense</strong><span>Readiness planners · Defense logistics teams</span><span class="picker-arrow" aria-hidden="true">↗</span></button></div><p class="visually-hidden" id="workspace-announcement" role="status" aria-live="polite" aria-atomic="true"></p><section class="workspace-panel" id="workspace-urban" data-panel="urban" aria-labelledby="urban-title">
+ <div class="domain-intro"><div><div class="eyebrow">Urban / Concept workspace</div><h3 id="urban-title">Understand a city in context.</h3><p>Explore the relationship between the built environment, water exposure, and essential services.</p></div><div class="customer-context"><span class="eyebrow">Who it serves</span><p>City planners · Infrastructure operators</p></div></div>
+ <div class="workspace"><div class="workspace-header"><span class="eyebrow">◎ District exposure</span><span class="example-badge"><span class="dot" aria-hidden="true"></span>Interactive concept</span></div>
+ <div class="scenario-toolbar interactive-only"><button type="button" class="scenario-button" data-action="scenario" aria-pressed="false">Show water scenario</button><button type="button" class="text-control" data-action="connections" aria-pressed="true">Connections on</button><button type="button" class="reset-control" data-action="reset" aria-label="Reset this workspace">Reset view ↺</button><span data-part="mode">District baseline</span></div>
+ <div class="workspace-body"><div class="object-rail"><div class="rail-heading"><span class="eyebrow">Objects</span><span class="rail-count">04</span></div><p class="rail-hint">Select to inspect</p><div class="asset-list interactive-only" role="group" aria-label="Select a Urban object"><button type="button" data-select-asset="homes" aria-pressed="false"><span class="asset-indicator" aria-hidden="true">◎</span><span>Residential block</span><span class="asset-arrow" aria-hidden="true">↗</span></button><button type="button" data-select-asset="clinic" aria-pressed="false"><span class="asset-indicator" aria-hidden="true">◎</span><span>District clinic</span><span class="asset-arrow" aria-hidden="true">↗</span></button><button type="button" data-select-asset="park" aria-pressed="false"><span class="asset-indicator" aria-hidden="true">◎</span><span>Open space</span><span class="asset-arrow" aria-hidden="true">↗</span></button><button type="button" data-select-asset="transit" aria-pressed="false"><span class="asset-indicator" aria-hidden="true">◎</span><span>Transit stop</span><span class="asset-arrow" aria-hidden="true">↗</span></button></div><div class="rail-bottom"><span class="eyebrow">Data context</span><p>Illustrative objects<br>and relationships</p></div></div><div class="workspace-map"><div class="map-heading"><span class="eyebrow">Spatial view</span><span class="map-hint">Select an object to inspect</span></div><p class="map-question">Which places need closer inspection when water reaches a district?</p><svg class="domain-map" viewBox="0 0 660 410" role="group" aria-labelledby="urban-map-title"><title id="urban-map-title">Fictional District exposure scene</title><path d="M40 286L308 80L625 244L350 385Z" fill="#F5F5F2" stroke="#CDD0CD"/><path d="M45 265C175 212 180 280 289 266S421 240 594 332" stroke="#5F91B8" opacity=".4" stroke-width="28" fill="none"/><path d="M110 218L420 366M220 138L536 303M140 325L458 133" stroke="#CDD0CD" stroke-width="12"/><g data-part="overlay" style="display:none"><path d="M89 180L180 148L357 113L386 189L205 292L94 262Z" fill="#5F91B8" fill-opacity=".24" stroke="#5F91B8" stroke-dasharray="5 5"/></g><g data-part="links" fill="none" stroke="#70777C" stroke-width="1.5" stroke-dasharray="5 6"><path d="M160 210L330 150M160 210L200 315M330 150L490 275"/></g><g data-asset="homes" class="domain-object"><circle class="selection-ring" cx="160" cy="206" r="40" fill="none" stroke="#101820" stroke-width="2"/><path d="M134 210V167L160 152L186 167V210L160 225Z" fill="#C6C9C3" stroke="#70777C"/><path d="M134 167L160 182L186 167M160 182V225" fill="none" stroke="#70777C"/><g class="asset-flag" style="display:none" aria-hidden="true"><circle cx="195" cy="178" r="10" fill="#D6A44C" stroke="#252A2E"/><text x="195" y="182">!</text></g><text x="160" y="267">Residential block</text></g><g data-asset="clinic" class="domain-object"><circle class="selection-ring" cx="330" cy="146" r="40" fill="none" stroke="#101820" stroke-width="2"/><path d="M304 150V107L330 92L356 107V150L330 165Z" fill="#C6C9C3" stroke="#70777C"/><path d="M304 107L330 122L356 107M330 122V165" fill="none" stroke="#70777C"/><g class="asset-flag" style="display:none" aria-hidden="true"><circle cx="365" cy="118" r="10" fill="#D6A44C" stroke="#252A2E"/><text x="365" y="122">!</text></g><text x="330" y="207">District clinic</text></g><g data-asset="park" class="domain-object"><circle class="selection-ring" cx="200" cy="311" r="40" fill="none" stroke="#101820" stroke-width="2"/><path d="M170 315L200 295L230 315L200 335Z" fill="#63866A" opacity=".8"/><g class="asset-flag" style="display:none" aria-hidden="true"><circle cx="235" cy="283" r="10" fill="#D6A44C" stroke="#252A2E"/><text x="235" y="287">!</text></g><text x="200" y="372">Open space</text></g><g data-asset="transit" class="domain-object"><circle class="selection-ring" cx="490" cy="271" r="40" fill="none" stroke="#101820" stroke-width="2"/><path d="M464 275V232L490 217L516 232V275L490 290Z" fill="#C6C9C3" stroke="#70777C"/><path d="M464 232L490 247L516 232M490 247V290" fill="none" stroke="#70777C"/><g class="asset-flag" style="display:none" aria-hidden="true"><circle cx="525" cy="243" r="10" fill="#D6A44C" stroke="#252A2E"/><text x="525" y="247">!</text></g><text x="490" y="332">Transit stop</text></g></svg><p class="domain-legend">Blue / hypothetical water · ! / inspection flag</p><div class="demo-summary"><span><strong>4</strong> sample objects</span><span><strong data-part="count">0</strong> places to inspect</span></div></div>
+ <aside class="demo-inspector"><div class="eyebrow">Object inspector</div><h4 data-part="name" tabindex="-1">Residential block</h4><p data-part="kind">Buildings / housing</p><span class="object-status" data-part="status">Baseline inventory</span><p data-part="description">A sample housing block beside the district waterway.</p><h5>Connected objects</h5><ul data-part="related"><li>District clinic</li><li>Open space</li></ul><div class="decision-note"><h5>Decision context</h5><p data-part="next">Inspect the footprint and the source observation before drawing an exposure conclusion.</p></div><details><summary>Source &amp; interpretation</summary><p>Fictional district inventory and a hand-drawn water scenario. Flags are predefined examples, not computed flood exposure.</p></details></aside></div>
+ <ol class="domain-workflow"><li><span>01</span>Explore the district</li><li><span>02</span>Inspect exposed places</li><li><span>03</span>Compare planning options</li></ol><p class="workspace-note"><span>PLANNING LENS</span> which buildings and services should be inspected first?</p></div></section><section class="workspace-panel" id="workspace-domestic" data-panel="domestic" aria-labelledby="domestic-title">
+ <div class="domain-intro"><div><div class="eyebrow">Domestic Security / Concept workspace</div><h3 id="domestic-title">Coordinate around the incident.</h3><p>Bring a reported incident, affected services, and response dependencies into the same view.</p></div><div class="customer-context"><span class="eyebrow">Who it serves</span><p>Emergency coordinators · Critical-service operators</p></div></div>
+ <div class="workspace"><div class="workspace-header"><span class="eyebrow">◎ Incident coordination</span><span class="example-badge"><span class="dot" aria-hidden="true"></span>Interactive concept</span></div>
+ <div class="scenario-toolbar interactive-only"><button type="button" class="scenario-button" data-action="scenario" aria-pressed="false">Open incident example</button><button type="button" class="text-control" data-action="connections" aria-pressed="true">Connections on</button><button type="button" class="reset-control" data-action="reset" aria-label="Reset this workspace">Reset view ↺</button><span data-part="mode">Service context</span></div>
+ <div class="workspace-body"><div class="object-rail"><div class="rail-heading"><span class="eyebrow">Objects</span><span class="rail-count">04</span></div><p class="rail-hint">Select to inspect</p><div class="asset-list interactive-only" role="group" aria-label="Select a Domestic Security object"><button type="button" data-select-asset="utility" aria-pressed="false"><span class="asset-indicator" aria-hidden="true">◎</span><span>Utility station</span><span class="asset-arrow" aria-hidden="true">↗</span></button><button type="button" data-select-asset="hospital" aria-pressed="false"><span class="asset-indicator" aria-hidden="true">◎</span><span>Community hospital</span><span class="asset-arrow" aria-hidden="true">↗</span></button><button type="button" data-select-asset="center" aria-pressed="false"><span class="asset-indicator" aria-hidden="true">◎</span><span>Coordination center</span><span class="asset-arrow" aria-hidden="true">↗</span></button><button type="button" data-select-asset="shelter" aria-pressed="false"><span class="asset-indicator" aria-hidden="true">◎</span><span>Community shelter</span><span class="asset-arrow" aria-hidden="true">↗</span></button></div><div class="rail-bottom"><span class="eyebrow">Data context</span><p>Illustrative objects<br>and relationships</p></div></div><div class="workspace-map"><div class="map-heading"><span class="eyebrow">Spatial view</span><span class="map-hint">Select an object to inspect</span></div><p class="map-question">Which facilities and response functions connect to a utility incident?</p><svg class="domain-map" viewBox="0 0 660 410" role="group" aria-labelledby="domestic-map-title"><title id="domestic-map-title">Fictional Incident coordination scene</title><path d="M35 45H625V370H35Z" fill="#F5F5F2"/><g stroke="#CDD0CD" stroke-width="14"><path d="M35 165H625M250 45V370M35 280H625M450 45V370"/></g><g fill="none" stroke="#CDD0CD"><rect x="60" y="60" width="135" height="72" rx="6"/><rect x="65" y="195" width="125" height="50" rx="6"/><rect x="295" y="65" width="100" height="64" rx="6"/><rect x="65" y="310" width="120" height="42" rx="6"/></g><g data-part="overlay" style="display:none"><circle cx="300" cy="195" r="67" fill="#D6A44C" fill-opacity=".13" stroke="#D6A44C" stroke-width="2"/><circle cx="300" cy="195" r="84" fill="none" stroke="#D6A44C" stroke-dasharray="5 6"/></g><g data-part="links" fill="none" stroke="#70777C" stroke-width="1.5" stroke-dasharray="5 6"><path d="M300 195L140 95M300 195L505 115M140 95L505 115M505 115L480 300"/></g><g data-asset="utility" class="domain-object"><circle class="selection-ring" cx="300" cy="191" r="40" fill="none" stroke="#101820" stroke-width="2"/><rect x="274" y="168" width="52" height="52" rx="8" fill="#F5F5F2" stroke="#70777C"/><text x="300" y="199">01</text><g class="asset-flag" style="display:none" aria-hidden="true"><circle cx="335" cy="163" r="10" fill="#D6A44C" stroke="#252A2E"/><text x="335" y="167">!</text></g><text x="300" y="252">Utility station</text></g><g data-asset="hospital" class="domain-object"><circle class="selection-ring" cx="140" cy="91" r="40" fill="none" stroke="#101820" stroke-width="2"/><rect x="114" y="68" width="52" height="52" rx="8" fill="#F5F5F2" stroke="#70777C"/><path d="M129 93H151M140 82V104" stroke="#252A2E" stroke-width="3"/><g class="asset-flag" style="display:none" aria-hidden="true"><circle cx="175" cy="63" r="10" fill="#D6A44C" stroke="#252A2E"/><text x="175" y="67">!</text></g><text x="140" y="152">Community hospital</text></g><g data-asset="center" class="domain-object"><circle class="selection-ring" cx="505" cy="111" r="40" fill="none" stroke="#101820" stroke-width="2"/><rect x="479" y="88" width="52" height="52" rx="8" fill="#F5F5F2" stroke="#70777C"/><text x="505" y="119">03</text><g class="asset-flag" style="display:none" aria-hidden="true"><circle cx="540" cy="83" r="10" fill="#D6A44C" stroke="#252A2E"/><text x="540" y="87">!</text></g><text x="505" y="172">Coordination center</text></g><g data-asset="shelter" class="domain-object"><circle class="selection-ring" cx="480" cy="296" r="40" fill="none" stroke="#101820" stroke-width="2"/><rect x="454" y="273" width="52" height="52" rx="8" fill="#F5F5F2" stroke="#70777C"/><text x="480" y="304">04</text><g class="asset-flag" style="display:none" aria-hidden="true"><circle cx="515" cy="268" r="10" fill="#D6A44C" stroke="#252A2E"/><text x="515" y="272">!</text></g><text x="480" y="357">Community shelter</text></g></svg><p class="domain-legend">Amber / incident context · ! / review flag</p><div class="demo-summary"><span><strong>4</strong> sample objects</span><span><strong data-part="count">0</strong> services to review</span></div></div>
+ <aside class="demo-inspector"><div class="eyebrow">Object inspector</div><h4 data-part="name" tabindex="-1">Utility station</h4><p data-part="kind">Incident location / power</p><span class="object-status" data-part="status">Service context</span><p data-part="description">The location of a fictional service-interruption report.</p><h5>Connected objects</h5><ul data-part="related"><li>Community hospital</li><li>Coordination center</li></ul><div class="decision-note"><h5>Decision context</h5><p data-part="next">Verify the report with the service owner before coordinating a response.</p></div><details><summary>Source &amp; interpretation</summary><p>A fictional incident report and hand-authored facility dependencies. No people, real incidents, dispatching, or live alerts are represented.</p></details></aside></div>
+ <ol class="domain-workflow"><li><span>01</span>Review the report</li><li><span>02</span>Inspect service dependencies</li><li><span>03</span>Prepare a coordination brief</li></ol><p class="workspace-note"><span>COORDINATION LENS</span> which service owners should be included in the incident review?</p></div></section><section class="workspace-panel" id="workspace-defense" data-panel="defense" aria-labelledby="defense-title">
+ <div class="domain-intro"><div><div class="eyebrow">Defense / Concept workspace</div><h3 id="defense-title">See what readiness depends on.</h3><p>Connect support infrastructure, logistics links, and maintenance dependencies across a regional picture.</p></div><div class="customer-context"><span class="eyebrow">Who it serves</span><p>Readiness planners · Defense logistics teams</p></div></div>
+ <div class="workspace"><div class="workspace-header"><span class="eyebrow">◎ Readiness &amp; logistics</span><span class="example-badge"><span class="dot" aria-hidden="true"></span>Interactive concept</span></div>
+ <div class="scenario-toolbar interactive-only"><button type="button" class="scenario-button" data-action="scenario" aria-pressed="false">Review disruption example</button><button type="button" class="text-control" data-action="connections" aria-pressed="true">Connections on</button><button type="button" class="reset-control" data-action="reset" aria-label="Reset this workspace">Reset view ↺</button><span data-part="mode">Support network</span></div>
+ <div class="workspace-body"><div class="object-rail"><div class="rail-heading"><span class="eyebrow">Objects</span><span class="rail-count">04</span></div><p class="rail-hint">Select to inspect</p><div class="asset-list interactive-only" role="group" aria-label="Select a Defense object"><button type="button" data-select-asset="port" aria-pressed="false"><span class="asset-indicator" aria-hidden="true">◎</span><span>Supply terminal</span><span class="asset-arrow" aria-hidden="true">↗</span></button><button type="button" data-select-asset="depot" aria-pressed="false"><span class="asset-indicator" aria-hidden="true">◎</span><span>Support hub</span><span class="asset-arrow" aria-hidden="true">↗</span></button><button type="button" data-select-asset="maintenance" aria-pressed="false"><span class="asset-indicator" aria-hidden="true">◎</span><span>Maintenance site</span><span class="asset-arrow" aria-hidden="true">↗</span></button><button type="button" data-select-asset="airfield" aria-pressed="false"><span class="asset-indicator" aria-hidden="true">◎</span><span>Transport airfield</span><span class="asset-arrow" aria-hidden="true">↗</span></button></div><div class="rail-bottom"><span class="eyebrow">Data context</span><p>Illustrative objects<br>and relationships</p></div></div><div class="workspace-map"><div class="map-heading"><span class="eyebrow">Spatial view</span><span class="map-hint">Select an object to inspect</span></div><p class="map-question">Which support assets depend on a disrupted logistics hub?</p><svg class="domain-map" viewBox="0 0 660 410" role="group" aria-labelledby="defense-map-title"><title id="defense-map-title">Fictional Readiness &amp; logistics scene</title><path d="M25 20H640V380H25Z" fill="#E3E4DF"/><path d="M25 20H117L92 85L137 160L96 238L139 307L110 380H25Z" fill="#5F91B8" opacity=".3"/><g fill="none" stroke="#CDD0CD"><path d="M205 20C90 160 386 161 262 380M277 20C164 164 470 180 347 380M357 20C262 146 575 213 422 380M438 20C338 155 655 232 511 380"/></g><path d="M115 270L310 180L465 295M310 180L515 95" fill="none" stroke="#B8BDB7" stroke-width="12"/><g data-part="overlay" style="display:none"><circle cx="310" cy="180" r="45" fill="#D6A44C" fill-opacity=".15" stroke="#D6A44C" stroke-width="2"/><path d="M336 204L439 271" stroke="#D6A44C" stroke-width="4" stroke-dasharray="7 6"/></g><g data-part="links" fill="none" stroke="#70777C" stroke-width="1.5" stroke-dasharray="5 6"><path d="M115 270L310 180M310 180L465 295M310 180L515 95"/></g><g data-asset="port" class="domain-object"><circle class="selection-ring" cx="115" cy="266" r="40" fill="none" stroke="#101820" stroke-width="2"/><path d="M86 250H144V290H86Z" fill="#F5F5F2" stroke="#70777C"/><path d="M97 261H133M97 270H133M97 279H133" stroke="#70777C"/><g class="asset-flag" style="display:none" aria-hidden="true"><circle cx="150" cy="238" r="10" fill="#D6A44C" stroke="#252A2E"/><text x="150" y="242">!</text></g><text x="115" y="327">Supply terminal</text></g><g data-asset="depot" class="domain-object"><circle class="selection-ring" cx="310" cy="176" r="40" fill="none" stroke="#101820" stroke-width="2"/><path d="M281 160H339V200H281Z" fill="#F5F5F2" stroke="#70777C"/><path d="M292 171H328M292 180H328M292 189H328" stroke="#70777C"/><g class="asset-flag" style="display:none" aria-hidden="true"><circle cx="345" cy="148" r="10" fill="#D6A44C" stroke="#252A2E"/><text x="345" y="152">!</text></g><text x="310" y="237">Support hub</text></g><g data-asset="maintenance" class="domain-object"><circle class="selection-ring" cx="465" cy="291" r="40" fill="none" stroke="#101820" stroke-width="2"/><path d="M436 275H494V315H436Z" fill="#F5F5F2" stroke="#70777C"/><path d="M447 286H483M447 295H483M447 304H483" stroke="#70777C"/><g class="asset-flag" style="display:none" aria-hidden="true"><circle cx="500" cy="263" r="10" fill="#D6A44C" stroke="#252A2E"/><text x="500" y="267">!</text></g><text x="465" y="352">Maintenance site</text></g><g data-asset="airfield" class="domain-object"><circle class="selection-ring" cx="515" cy="91" r="40" fill="none" stroke="#101820" stroke-width="2"/><path d="M486 75H544V115H486Z" fill="#F5F5F2" stroke="#70777C"/><path d="M497 86H533M497 95H533M497 104H533" stroke="#70777C"/><g class="asset-flag" style="display:none" aria-hidden="true"><circle cx="550" cy="63" r="10" fill="#D6A44C" stroke="#252A2E"/><text x="550" y="67">!</text></g><text x="515" y="152">Transport airfield</text></g></svg><p class="domain-legend">Dashed lines / support links · ! / review flag</p><div class="demo-summary"><span><strong>4</strong> sample objects</span><span><strong data-part="count">0</strong> dependencies to review</span></div></div>
+ <aside class="demo-inspector"><div class="eyebrow">Object inspector</div><h4 data-part="name" tabindex="-1">Supply terminal</h4><p data-part="kind">Logistics / receiving</p><span class="object-status" data-part="status">Support-network context</span><p data-part="description">A fictional receiving point connected to an inland support hub.</p><h5>Connected objects</h5><ul data-part="related"><li>Support hub</li></ul><div class="decision-note"><h5>Decision context</h5><p data-part="next">Review the receiving-to-hub dependency and verify its current status.</p></div><details><summary>Source &amp; interpretation</summary><p>Fictional support assets and a predefined disruption scenario. No operational locations, force movements, targeting, or live readiness assessments.</p></details></aside></div>
+ <ol class="domain-workflow"><li><span>01</span>Inspect the support network</li><li><span>02</span>Review dependencies</li><li><span>03</span>Prepare a readiness brief</li></ol><p class="workspace-note"><span>READINESS LENS</span> which support dependencies need verification before planning adjustments?</p></div></section><noscript><p>These are static concept previews. Enable JavaScript to switch workspaces and explore the example scenarios.</p></noscript></section>
+      <section class="content-section" id="platform" aria-labelledby="platform-title">
+        <div class="section-heading"><div><div class="eyebrow">02 / The shared foundation</div><h2 id="platform-title">From observation<br>to understanding.</h2></div><p>A common foundation connects spatial information to the objects and events it describes. The design follows a simple path from observation to a considered decision.</p></div>
+        <div class="steps"><article class="step"><span class="step-number">01</span><h3>Observe <span aria-hidden="true">→</span></h3><p>Bring maps, imagery, asset records, and observations into a common spatial context.</p></article><article class="step"><span class="step-number">02</span><h3>Detect <span aria-hidden="true">→</span></h3><p>Identify changes, intersections, and patterns through defined analytical methods.</p></article><article class="step"><span class="step-number">03</span><h3>Understand <span aria-hidden="true">→</span></h3><p>Inspect the affected places, their relationships, and the evidence behind a result.</p></article><article class="step"><span class="step-number">04</span><h3>Decide <span aria-hidden="true">↗</span></h3><p>Compare scenarios and preserve the reasoning that informs a practical next step.</p></article></div>
+      </section>
+      <section class="content-section" id="approach" aria-labelledby="approach-title">
+        <div class="section-heading"><div><div class="eyebrow">03 / Our approach</div><h2 id="approach-title">Clarity you can examine.</h2></div><p>The interface should make complex information easier to understand while preserving its meaning, provenance, and uncertainty.</p></div>
+        <div class="method-grid"><article class="principle"><h3>Evidence stays visible.</h3><p>Designed to keep source, observation time, method, and limitations close to every analytical result.</p></article><article class="principle"><h3>Scenarios preserve the base.</h3><p>Our design keeps scenario changes separate from source data to support comparison and reproducibility.</p></article><article class="principle"><h3>Analysis produces the numbers.</h3><p>Our approach uses deterministic tools for calculations, with AI assistance intended to interpret questions and explain evidence.</p></article></div>
+      </section>
+      <section class="contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="contact-intro"><div class="eyebrow">04 / Contact us</div><h2 id="contact-title">Let’s start a<br>conversation.</h2><p>Have a question, a use case, or an idea for collaboration? Get in touch.</p></div>
+        <div class="contact-links">
+          <a class="contact-row" href="mailto:hello@attawutn.dev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m3 6 9 7 9-7"/></svg><span class="contact-label">Email</span><span class="contact-value">hello@attawutn.dev</span><span class="contact-arrow" aria-hidden="true">↗</span></a>
+          <a class="contact-row" href="https://www.linkedin.com/in/attawutn/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="9" width="4" height="12"/><circle cx="5" cy="4" r="2"/><path d="M11 21V9h4v2c1-2 6-3 6 3v7h-4v-7c0-2-2-2-2 0v7Z"/></svg><span class="contact-label">LinkedIn</span><span class="contact-value">linkedin.com/in/attawutn</span><span class="contact-arrow" aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+        </div>
+      </section>
+    </div>
   </main>
-  <footer>coherenceishere.dev</footer>
-
-<script>
-(function () {
-  const canvas = document.getElementById("waves");
-  const ctx = canvas.getContext("2d");
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  let W = 0, H = 0, DPR = 1;
-  const LINES = 9;          // number of waves
-  const SEG = 2;            // px per segment (smaller = smoother, heavier)
-
-  function resize() {
-    DPR = Math.min(window.devicePixelRatio || 1, 2);
-    W = window.innerWidth;
-    H = window.innerHeight;
-    canvas.width = Math.floor(W * DPR);
-    canvas.height = Math.floor(H * DPR);
-    canvas.style.width = W + "px";
-    canvas.style.height = H + "px";
-    ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
-  }
-  resize();
-  window.addEventListener("resize", resize);
-
-  // smootherstep easing for the coherence cycle
-  function ease(t) { return t * t * t * (t * (t * 6 - 15) + 10); }
-
-  function draw(timeMs) {
-    const t = timeMs * 0.001;
-    ctx.clearRect(0, 0, W, H);
-
-    // Global coherence oscillates 0 (scattered) -> 1 (aligned) and back.
-    const raw = (Math.sin(t * 0.16) + 1) / 2;   // slow breathing cycle (~40s)
-    const c = ease(raw);
-
-    const midY = H * 0.5;
-    const baseAmp = Math.min(H * 0.12, 130);
-    const spread = Math.min(H * 0.22, 240);      // vertical scatter when incoherent
-    const k = (2 * Math.PI) / Math.max(W * 0.9, 480); // base wavelength
-
-    for (let i = 0; i < LINES; i++) {
-      const centered = i - (LINES - 1) / 2;      // -4 .. 4
-
-      // When incoherent: each line has its own phase, freq wobble, vertical offset.
-      // When coherent: all collapse to a shared phase/freq at the center.
-      const scatterPhase = i * 1.9 + Math.sin(t * 0.5 + i) * 0.6;
-      const coherentPhase = t * 0.9;
-      const phase = scatterPhase * (1 - c) + coherentPhase;
-
-      const freqScatter = 1 + centered * 0.16 + Math.sin(t * 0.3 + i) * 0.05;
-      const freq = freqScatter * (1 - c) + 1 * c;
-
-      const yOffset = centered * spread * (1 - c);
-      const ampMod = baseAmp * (0.6 + 0.4 * Math.sin(t * 0.4 + i));
-      const amp = ampMod * (0.5 + 0.5 * c) ;      // waves swell as they align
-
-      // opacity: faint & many when scattered, brighter & unified when coherent
-      const alpha = (0.10 + 0.32 * c) * (1 - Math.abs(centered) / (LINES));
-      // cool -> warm tint shift across the set
-      const hue = 200 - centered * 6;
-      ctx.strokeStyle = `hsla(${hue}, ${18 + 26 * c}%, ${72 + 6 * c}%, ${alpha})`;
-      ctx.lineWidth = 1.1 + 1.0 * c;
-      ctx.beginPath();
-
-      for (let x = 0; x <= W; x += SEG) {
-        // two summed harmonics give a richer, less mechanical wave
-        const y =
-          midY + yOffset +
-          Math.sin(x * k * freq + phase) * amp +
-          Math.sin(x * k * freq * 2.1 + phase * 1.4) * amp * 0.18 * (1 - c * 0.5);
-        if (x === 0) ctx.moveTo(x, y);
-        else ctx.lineTo(x, y);
-      }
-      ctx.stroke();
-    }
-
-    // soft central glow that pulses with coherence
-    const g = ctx.createRadialGradient(W / 2, midY, 0, W / 2, midY, Math.max(W, H) * 0.5);
-    g.addColorStop(0, `rgba(231, 226, 216, ${0.05 * c})`);
-    g.addColorStop(1, "rgba(231, 226, 216, 0)");
-    ctx.fillStyle = g;
-    ctx.fillRect(0, 0, W, H);
-
-    if (!reduceMotion) requestAnimationFrame(draw);
-  }
-
-  if (reduceMotion) {
-    // render a single calm coherent frame
-    draw(9000);
-  } else {
-    requestAnimationFrame(draw);
-  }
+  <footer><div class="wrap footer-main"><div><a class="brand brand-artwork" href="#top" aria-label="Coherence Is Here home"><span class="logo-frame"><img src="assets/coherence-is-here-logo.png" width="1024" height="1024" alt="Coherence Is Here" decoding="async"></span></a><p>Urban &amp; Security Intelligence</p></div><nav aria-label="Footer navigation"><a href="#explorer">Workspaces</a><a href="#platform">Platform</a><a href="#approach">Our approach</a><a href="#contact">Contact us</a></nav><div class="footer-status"><span class="eyebrow">Independent platform concept</span><p>Designed around real-world decisions.</p></div></div><div class="wrap footer-bottom"><span>© 2026 Coherence Is Here</span><a href="https://coherenceishere.dev/">coherenceishere.dev <span aria-hidden="true">↗</span></a></div></footer>
+  <script>
+(() => {
+ const data={"urban": {"name": "Urban", "audience": "City planners · Infrastructure operators", "title": "Understand a city in context.", "purpose": "Explore the relationship between the built environment, water exposure, and essential services.", "question": "Which places need closer inspection when water reaches a district?", "scene": "District exposure", "toggle": "Show water scenario", "baseline": "District baseline", "observation": "Hypothetical water extent", "flagLabel": "places to inspect", "legend": "Blue / hypothetical water · ! / inspection flag", "workflow": ["Explore the district", "Inspect exposed places", "Compare planning options"], "outcome": "Planning question: which buildings and services should be inspected first?", "evidence": "Fictional district inventory and a hand-drawn water scenario. Flags are predefined examples, not computed flood exposure.", "flags": ["homes", "clinic"], "objects": {"homes": {"name": "Residential block", "kind": "Buildings / housing", "description": "A sample housing block beside the district waterway.", "normal": "Baseline inventory", "changed": "Example water-exposure flag", "next": "Inspect the footprint and the source observation before drawing an exposure conclusion.", "related": ["clinic", "park"], "x": 160, "y": 210}, "clinic": {"name": "District clinic", "kind": "Essential service / healthcare", "description": "A sample clinic serving the surrounding residential area.", "normal": "Baseline inventory", "changed": "Example service-continuity flag", "next": "Review access and service dependencies alongside the building footprint.", "related": ["homes", "transit"], "x": 330, "y": 150}, "park": {"name": "Open space", "kind": "Land use / public space", "description": "A sample open space included for land-use context.", "normal": "Baseline inventory", "changed": "Context only", "next": "Compare land-use context with the observation boundary.", "related": ["homes"], "x": 200, "y": 315}, "transit": {"name": "Transit stop", "kind": "Mobility / public transport", "description": "A sample transit access point connecting the district to wider services.", "normal": "Baseline inventory", "changed": "No example flag", "next": "Inspect connections to essential services.", "related": ["clinic"], "x": 490, "y": 275}}}, "domestic": {"name": "Domestic Security", "audience": "Emergency coordinators · Critical-service operators", "title": "Coordinate around the incident.", "purpose": "Bring a reported incident, affected services, and response dependencies into the same view.", "question": "Which facilities and response functions connect to a utility incident?", "scene": "Incident coordination", "toggle": "Open incident example", "baseline": "Service context", "observation": "Fictional utility incident", "flagLabel": "services to review", "legend": "Amber / incident context · ! / review flag", "workflow": ["Review the report", "Inspect service dependencies", "Prepare a coordination brief"], "outcome": "Coordination question: which service owners should be included in the incident review?", "evidence": "A fictional incident report and hand-authored facility dependencies. No people, real incidents, dispatching, or live alerts are represented.", "flags": ["utility", "hospital"], "objects": {"utility": {"name": "Utility station", "kind": "Incident location / power", "description": "The location of a fictional service-interruption report.", "normal": "Service context", "changed": "Sample incident reported", "next": "Verify the report with the service owner before coordinating a response.", "related": ["hospital", "center"], "x": 300, "y": 195}, "hospital": {"name": "Community hospital", "kind": "Critical service / healthcare", "description": "A sample critical facility linked to the utility station.", "normal": "Service context", "changed": "Dependency review needed", "next": "Review continuity arrangements with the facility operator.", "related": ["utility", "center"], "x": 140, "y": 95}, "center": {"name": "Coordination center", "kind": "Response coordination", "description": "A fictional coordination point linking service owners and response functions.", "normal": "Service context", "changed": "Coordination context", "next": "Gather verified updates and prepare a shared incident brief.", "related": ["utility", "hospital", "shelter"], "x": 505, "y": 115}, "shelter": {"name": "Community shelter", "kind": "Community support facility", "description": "A sample support facility included for response context.", "normal": "Service context", "changed": "No example flag", "next": "Confirm facility information with the responsible operator.", "related": ["center"], "x": 480, "y": 300}}}, "defense": {"name": "Defense", "audience": "Readiness planners · Defense logistics teams", "title": "See what readiness depends on.", "purpose": "Connect support infrastructure, logistics links, and maintenance dependencies across a regional picture.", "question": "Which support assets depend on a disrupted logistics hub?", "scene": "Readiness & logistics", "toggle": "Review disruption example", "baseline": "Support network", "observation": "Fictional hub disruption", "flagLabel": "dependencies to review", "legend": "Dashed lines / support links · ! / review flag", "workflow": ["Inspect the support network", "Review dependencies", "Prepare a readiness brief"], "outcome": "Readiness question: which support dependencies need verification before planning adjustments?", "evidence": "Fictional support assets and a predefined disruption scenario. No operational locations, force movements, targeting, or live readiness assessments.", "flags": ["depot", "maintenance"], "objects": {"port": {"name": "Supply terminal", "kind": "Logistics / receiving", "description": "A fictional receiving point connected to an inland support hub.", "normal": "Support-network context", "changed": "Upstream support context", "next": "Review the receiving-to-hub dependency and verify its current status.", "related": ["depot"], "x": 115, "y": 270}, "depot": {"name": "Support hub", "kind": "Logistics / distribution", "description": "A fictional hub linking supply, maintenance, and transport infrastructure.", "normal": "Support-network context", "changed": "Sample disruption flag", "next": "Verify the disruption and identify dependent support functions.", "related": ["port", "maintenance", "airfield"], "x": 310, "y": 180}, "maintenance": {"name": "Maintenance site", "kind": "Readiness / equipment support", "description": "A sample maintenance site with a supply dependency on the hub.", "normal": "Support-network context", "changed": "Supply dependency to review", "next": "Review maintenance support assumptions with the responsible team.", "related": ["depot"], "x": 465, "y": 295}, "airfield": {"name": "Transport airfield", "kind": "Logistics / transport", "description": "A fictional transport-support asset in the regional network.", "normal": "Support-network context", "changed": "Transport context", "next": "Inspect its connection to the support hub; no movements are modeled.", "related": ["depot"], "x": 515, "y": 95}}}};
+ const panels=Array.from(document.querySelectorAll('[data-panel]'));
+ const buttons=Array.from(document.querySelectorAll('[data-domain]'));
+ const states=Object.fromEntries(Object.entries(data).map(([id,d])=>[id,{selected:Object.keys(d.objects)[0],scenario:false,connections:true}]));
+ let active='urban';
+ function render(panel){
+  const id=panel.dataset.panel,d=data[id],s=states[id],o=d.objects[s.selected],flags=s.scenario?d.flags:[];
+  const part=name=>panel.querySelector('[data-part="'+name+'"]');
+  part('overlay').style.display=s.scenario?'block':'none';
+  part('links').style.display=s.connections?'block':'none';
+  part('mode').textContent=s.scenario?d.observation:d.baseline;
+  part('count').textContent=String(flags.length);
+  for(const [key,value] of Object.entries({name:o.name,kind:o.kind,description:o.description,next:o.next,status:s.scenario?o.changed:o.normal}))part(key).textContent=value;
+  part('status').classList.toggle('attention',flags.includes(s.selected));
+  part('related').replaceChildren(...o.related.map(asset=>{
+   const li=document.createElement('li'),button=document.createElement('button');
+   button.type='button';button.className='related-link';button.textContent=d.objects[asset].name+' ↗';
+   button.addEventListener('click',()=>{s.selected=asset;render(panel);announce();panel.querySelector('[data-part="name"]').focus();});
+   li.appendChild(button);return li;
+  }));
+  panel.querySelectorAll('[data-asset]').forEach(el=>{
+   const selected=el.dataset.asset===s.selected,flagged=flags.includes(el.dataset.asset);
+   el.setAttribute('role','button');el.setAttribute('tabindex','0');el.setAttribute('aria-pressed',String(selected));
+   el.setAttribute('aria-label','Inspect '+d.objects[el.dataset.asset].name+(flagged?'. Example attention flag':''));
+   el.querySelector('.asset-flag').style.display=flagged?'block':'none';
+  });
+  panel.querySelectorAll('[data-select-asset]').forEach(el=>el.setAttribute('aria-pressed',String(el.dataset.selectAsset===s.selected)));
+  const scenario=panel.querySelector('[data-action="scenario"]');scenario.setAttribute('aria-pressed',String(s.scenario));scenario.textContent=s.scenario?'Return to '+d.baseline.toLowerCase():d.toggle;
+  const connections=panel.querySelector('[data-action="connections"]');connections.setAttribute('aria-pressed',String(s.connections));connections.textContent=s.connections?'Connections on':'Connections off';
+ }
+ function announce(){const d=data[active],s=states[active],o=d.objects[s.selected];document.getElementById('workspace-announcement').textContent=d.name+'. '+(s.scenario?d.observation:d.baseline)+'. '+o.name+' selected. '+(s.scenario?o.changed:o.normal)+'.';}
+ function activate(id){active=id;panels.forEach(p=>p.hidden=p.dataset.panel!==id);buttons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.domain===id)));announce();}
+ panels.forEach(panel=>{
+  const id=panel.dataset.panel,s=states[id];
+  function select(asset){s.selected=asset;render(panel);announce();}
+  panel.querySelectorAll('[data-asset]').forEach(el=>{el.addEventListener('click',()=>select(el.dataset.asset));el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();select(el.dataset.asset);}});});
+  panel.querySelectorAll('[data-select-asset]').forEach(el=>el.addEventListener('click',()=>select(el.dataset.selectAsset)));
+  panel.querySelector('[data-action="scenario"]').addEventListener('click',()=>{s.scenario=!s.scenario;render(panel);announce();});
+  panel.querySelector('[data-action="connections"]').addEventListener('click',()=>{s.connections=!s.connections;render(panel);});
+  panel.querySelector('[data-action="reset"]').addEventListener('click',()=>{s.selected=Object.keys(data[id].objects)[0];s.scenario=false;s.connections=true;render(panel);announce();});
+  render(panel);
+ });
+ buttons.forEach((button,index)=>{
+  button.addEventListener('click',()=>activate(button.dataset.domain));
+  button.addEventListener('keydown',event=>{
+   let next=index;
+   if(event.key==='ArrowRight')next=(index+1)%buttons.length;
+   else if(event.key==='ArrowLeft')next=(index-1+buttons.length)%buttons.length;
+   else if(event.key==='Home')next=0;
+   else if(event.key==='End')next=buttons.length-1;
+   else return;
+   event.preventDefault();buttons[next].focus();activate(buttons[next].dataset.domain);
+  });
+ });
+ document.documentElement.classList.add('js');activate(active);
 })();
 </script>
 </body>
